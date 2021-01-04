@@ -165,7 +165,7 @@ Let's pretend that we've made an update to the implementation and/or the configu
 ```bash
 cf push stuff-green --random-route --no-start
 cf set-env stuff-green VERSION green
-cf set-env stuff-green SPRING_PROFILES_ACTIVE cloud,credhub,blue
+cf set-env stuff-green SPRING_PROFILES_ACTIVE cloud,credhub,green
 cf set-env stuff-green TRUST_CERTS api.run.pcfone.io
 cf config-server-add-sccs-secret sccs \
   stuff/green/master/stuff '{ "clouds": [ "AWS", "Azure", "GCP"  ], "languages": [ "Javascript", "Go", "Kotlin", "Python"  ] }'
