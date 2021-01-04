@@ -1,0 +1,8 @@
+---
+applications:
+- name: stuff
+  memory: 1G
+  path: build/libs/stuff-1.0-SNAPSHOT.jar
+  env:
+    JAVA_OPTS: -Djava.security.egd=file:///dev/urandom
+    JBP_CONFIG_SPRING_AUTO_RECONFIGURATION: '{ enabled: false }'

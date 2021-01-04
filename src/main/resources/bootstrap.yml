@@ -1,0 +1,10 @@
+spring:
+  application:
+    name: stuff
+  main:
+    allow-bean-definition-overriding: true
+  cloud:
+    config:
+      server:
+        credhub:
+          url: https://credhub:8844

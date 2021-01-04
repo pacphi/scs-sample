@@ -1,0 +1,4 @@
+{
+  "clouds": [ "AWS", "Azure", "GCP"  ],
+  "languages": [ "Javascript", "Go", "Kotlin", "Python"  ]
+}

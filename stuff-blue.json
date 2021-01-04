@@ -1,0 +1,4 @@
+{
+  "clouds": [ "Alibaba", "Digital Ocean", "Oracle" ],
+  "languages": [ "Java", "Clojure", "PHP", "Rust"  ]
+}
