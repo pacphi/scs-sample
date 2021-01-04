@@ -107,7 +107,7 @@ Edit the secret. In this case, we are removing then re-adding the secret above, 
 cf config-server-remove-sccs-secret mycs stuff/blue/master/stuff
 cf config-server-add-sccs-secret mycs \
   stuff/blue/master/stuff '{ "clouds": [ "AWS", "Azure", "GCP"  ], "languages": [ "Javascript", "Go", "Kotlin", "Python"  ] }'
-  cf restage stuff
+cf restage stuff
 ```
 > Note we'll take down time while we do this.  We'll explore how to update configuration in a zero-down time fashion later on.
 
