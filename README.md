@@ -69,7 +69,7 @@ Create a Spring Cloud Config service instance and seed with initial configuratio
 
 ```bash
 cf create-service p.config-server standard mycs
-cf config-server-add-sccs-secret mycs \
+cf config-server-add-credhub-secret mycs \
   stuff/blue/master/stuff '{ "clouds": [ "Alibaba", "Digital Ocean", "Oracle" ], "languages": [ "Java", "Clojure", "PHP", "Rust"  ] }'
 ```
 
@@ -104,8 +104,8 @@ http https://stuff.apps.pcfone.io
 Edit the secret. In this case, we are removing then re-adding the secret above, but with a different JSON payload.
 
 ```bash
-cf config-server-remove-sccs-secret mycs stuff/blue/master/stuff
-cf config-server-add-sccs-secret mycs \
+cf config-server-remove-credhub-secret mycs stuff/blue/master/stuff
+cf config-server-add-credhub-secret mycs \
   stuff/blue/master/stuff '{ "clouds": [ "AWS", "Azure", "GCP"  ], "languages": [ "Javascript", "Go", "Kotlin", "Python"  ] }'
 cf restage stuff
 ```
@@ -141,7 +141,7 @@ cf set-env stuff-blue VERSION blue
 cf set-env stuff-blue SPRING_PROFILES_ACTIVE cloud,credhub,blue
 cf set-env stuff-blue TRUST_CERTS api.run.pcfone.io
 cf bind-service stuff-blue sccs
-cf config-server-add-sccs-secret sccs \
+cf config-server-add-credhub-secret sccs \
   stuff/blue/master/stuff '{ "clouds": [ "Alibaba", "Digital Ocean", "Oracle" ], "languages": [ "Java", "Clojure", "PHP", "Rust"  ] }'
 cf start stuff-blue
 ```
@@ -167,7 +167,7 @@ cf push stuff-green --random-route --no-start
 cf set-env stuff-green VERSION green
 cf set-env stuff-green SPRING_PROFILES_ACTIVE cloud,credhub,green
 cf set-env stuff-green TRUST_CERTS api.run.pcfone.io
-cf config-server-add-sccs-secret sccs \
+cf config-server-add-credhub-secret sccs \
   stuff/green/master/stuff '{ "clouds": [ "AWS", "Azure", "GCP"  ], "languages": [ "Javascript", "Go", "Kotlin", "Python"  ] }'
 cf bind-service stuff-green sccs
 cf start stuff-green
