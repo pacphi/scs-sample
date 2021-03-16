@@ -210,6 +210,6 @@ Note: if you don't want to allow direct public access to either the blue or gree
 * [cf map-route](https://cli.cloudfoundry.org/en-US/v6/map-route.html)
 * [cf unmap-route](https://cli.cloudfoundry.org/en-US/v6/unmap-route.html)
 * [CloudFoundry: Using Blue-Green deployment and route mapping for continuous deployment](https://fabianlee.org/2018/02/20/cloudfoundry-using-blue-green-deloyment-and-route-mapping-for-continuous-deployment/)
-* [Changes in Spring Cloud 2020.0.0 requiring addition of spring-cloud-starter-bootstrap](https://stackoverflow.com/questions/30016868/spring-cloud-config-client-not-loading-configuration-from-config-server)
+* [Changes in Spring Cloud 2020.0.1 requiring addition of spring-cloud-starter-bootstrap](https://stackoverflow.com/questions/30016868/spring-cloud-config-client-not-loading-configuration-from-config-server)
 * [Disabling Webfux Security](https://stackoverflow.com/questions/53002900/disable-webflux-security/55356678)
 
